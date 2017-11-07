@@ -115,7 +115,7 @@ public class EspecieFacade {
 	public List<Especie> devolverEspeciesTotal() {
 		System.out.println("Antes");
 		try {
-			TypedQuery<Especie> consulta= em.createQuery("SELECT c FROM Especie c", Especie.class);
+			TypedQuery<Especie> consulta= (TypedQuery<Especie>) em.createNativeQuery("SELECT c FROM Especie c", Especie.class);
 			return consulta.getResultList();
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -127,7 +127,7 @@ public class EspecieFacade {
 	
 	public List<Especie> devolverEspeciesNombre(String pNombre) {
 		try {
-			TypedQuery<Especie> query = em.createQuery("Select e FROM Especie e WHERE upper(e.nombre) LIKE :nombre", Especie.class);
+			TypedQuery<Especie> query = (TypedQuery<Especie>) em.createNativeQuery("Select e FROM Especie e WHERE upper(e.nombre) LIKE :nombre", Especie.class);
 			query.setParameter("nombre", "%" + pNombre + "%");
 			return query.getResultList();
 		} catch (Exception e) {

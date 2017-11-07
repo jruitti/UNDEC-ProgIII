@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
@@ -16,11 +13,9 @@ import modelo.Especie;
 @Stateless
 public class EspecieFacade {
 	
-	EntityManagerFactory emf = Persistence.createEntityManagerFactory("veterinaria");
-	EntityManager em = emf.createEntityManager();
-	
-	//@PersistenceContext(unitName = "veterinaria")
-    //private EntityManager em;
+
+	@PersistenceContext(unitName = "VETERINARIAPU")
+    private EntityManager em;
 	
 	public EspecieFacade() {}
 	
@@ -34,7 +29,7 @@ public class EspecieFacade {
 		
 		try {
 //			em.getTransaction().begin();
-			em.merge(pEspecie);
+			em.persist(pEspecie);
 //			em.getTransaction().commit();
 //			System.out.println("CARGANDO DRIVER POSTGRES...");
 //			  Class.forName("org.postgresql.Driver");
@@ -115,7 +110,7 @@ public class EspecieFacade {
 	public List<Especie> devolverEspeciesTotal() {
 		System.out.println("Antes");
 		try {
-			TypedQuery<Especie> consulta= em.createQuery("SELECT c FROM Especie c", Especie.class);
+			TypedQuery<Especie> consulta= (TypedQuery<Especie>) em.createNativeQuery("SELECT c FROM Especie c", Especie.class);
 			return consulta.getResultList();
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -127,7 +122,7 @@ public class EspecieFacade {
 	
 	public List<Especie> devolverEspeciesNombre(String pNombre) {
 		try {
-			TypedQuery<Especie> query = em.createQuery("Select e FROM Especie e WHERE upper(e.nombre) LIKE :nombre", Especie.class);
+			TypedQuery<Especie> query = (TypedQuery<Especie>) em.createNativeQuery("Select e FROM Especie e WHERE upper(e.nombre) LIKE :nombre", Especie.class);
 			query.setParameter("nombre", "%" + pNombre + "%");
 			return query.getResultList();
 		} catch (Exception e) {

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<f:loadBundle basename="etiquetas.mensajes" var="msg" />
+
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Insert title here</title>
+</h:head>
+<h:body>
+	<h3>
+		<h:outputText value="#{msg.header}" />
+	</h3>
+	<h:form>
+		<h:inputText id="name" value="#{personBean.name}"></h:inputText>
+		<h:commandButton value="greeting" action="welcome"></h:commandButton>
+	</h:form>
+</h:body>
+</html>

@@ -34,7 +34,7 @@ public class EspecieFacade {
 		
 		try {
 //			em.getTransaction().begin();
-			em.merge(pEspecie);
+			em.persist(pEspecie);
 //			em.getTransaction().commit();
 //			System.out.println("CARGANDO DRIVER POSTGRES...");
 //			  Class.forName("org.postgresql.Driver");
