@@ -3,35 +3,32 @@ package controller;
 import java.io.Serializable;
 
 import javax.ejb.EJB;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 import modelo.Especie;
 import persistencia.EspecieFacade;
 
-
-@ManagedBean (name="especieController")
+@ManagedBean(name = "especieController")
 @SessionScoped
-public class EspecieController implements Serializable{
-
-	/**
-	 * 
-	 */
+public class EspecieController implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
+	/* Inyección de dependencia del bean Facade, que representa la persistencia */
 	@EJB
 	private EspecieFacade elFacade;
-	
+
+	/*
+	 * Atributo del ManagedBean que representa el objeto Especie a vincular en los
+	 * componentes de interfaz
+	 */
 	private Especie current;
-	private Especie especieGuardar;
-	private long idElegido;
-	private String mensaje;
-	
-	
+
 	public Especie getCurrent() {
-		if(current==null)
-		{
-			return new Especie();
+		if (current == null) {
+			current= new Especie();
 		}
 		return current;
 	}
@@ -39,47 +36,17 @@ public class EspecieController implements Serializable{
 	public void setCurrent(Especie current) {
 		this.current = current;
 	}
-	
-	public String getMensaje() {
-		return "Mashita";
-	}
 
-	public void setMensaje(String mensaje) {
-		this.mensaje = mensaje;
-	}
-	
-	public long getIdElegido() {
-		return idElegido;
-	}
-
-	public void setIdElegido(long idElegido) {
-		this.idElegido = idElegido;
-	}
-	
-	
-	public void retornarEspecie() {
-		current=elFacade.devolverEspecie(idElegido);
-		System.out.println("Current >>" + current.getNombre());
-	}
-	
+	/* Método que se invoca cuando se hace clic en el botón Guardar Especie */
 	public void guardarEspecie() {
-		elFacade.registrarEspecie(especieGuardar);
-		System.out.println("Registrar Especie Current >>" + especieGuardar.getNombre());
-		especieGuardar=new Especie();
-	}
-
-	public Especie getEspecieGuardar() {
-		if(especieGuardar==null) {
-			especieGuardar=new Especie();
+		if (elFacade.registrarEspecie(current)) {
+			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Especie creada correctamente", "Especie "+ current.getNombre()+" creada correctamente"));
+			current = new Especie();
 		}
-			return especieGuardar;
+		else
+		{
+			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "No se pudo registrar la especie", "Ocurrió un error al registrar la especie"));
+		}
 	}
-
-	public void setEspecieGuardar(Especie especieGuardar) {
-		this.especieGuardar = especieGuardar;
-	}
-
-	
-	
 
 }
