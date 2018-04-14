@@ -1,6 +1,7 @@
 package clases;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Piloto {
 
@@ -16,6 +17,20 @@ public class Piloto {
 		this.nombres = nombres;
 		this.documento = documento;
 		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public Integer getAge(LocalDate actualDate) {
+
+		return Period.between(fechaNacimiento, actualDate).getYears();
+
+	}
+
+	public LocalDate getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public String getSurnameAndName() {
+		return this.apellido + ", " + this.nombres;
 	}
 
 }
