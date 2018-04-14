@@ -36,19 +36,6 @@ public class PilotoTest {
 
 	}
 
-	/*
-	 * @Test public void FlightHoursPilot_RequestSum_ReturnSum() {
-	 * 
-	 * final Piloto aPilot = makeAPilot();
-	 * 
-	 * final Integer hours = PilotsInteractor.getFlightHours(aPilot); }
-	 * 
-	 * @Test public void FlightHoursPilot_NoFlights_ReturnZero() {
-	 * 
-	 * final Piloto aPilot = makeAPilot(); final Integer hours =
-	 * PilotsInteractor.getFlightHours(aPilot); }
-	 */
-
 	@Test
 	public void Pilots_AgeCriteriaEqualDateOfBirth_OutputOrderIndistinctly() {
 

@@ -24,7 +24,7 @@ public class PilotsInteractor {
 
 	}
 
-	public Integer getFlightHours(Piloto aPilot) {
+	public static Integer getFlightHours(Piloto aPilot) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

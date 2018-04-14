@@ -1,22 +1,22 @@
 package clases;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Collection;
 
 public class Vuelo {
 
 	private final String codigoVuelo;
 	private final Aeropuerto salida;
-	private final LocalDate fechaHoraSalida;
+	private final LocalDateTime fechaHoraSalida;
 	private final Aeropuerto arribo;
-	private final LocalDate fechaHoraArribo;
+	private final LocalDateTime fechaHoraArribo;
 	private final Aerolinea aerolinea;
 	private final Collection<Piloto> pilotos;
 	private final Avion avion;
 	private final Collection<Pasajero> pasajeros;
 
-	public Vuelo(String codigoVuelo, Aeropuerto salida, LocalDate fechaHoraSalida, Aeropuerto arribo,
-			LocalDate fechaHoraArribo, Aerolinea aerolinea, Collection<Piloto> pilotos, Avion avion,
+	public Vuelo(String codigoVuelo, Aeropuerto salida, LocalDateTime fechaHoraSalida, Aeropuerto arribo,
+			LocalDateTime fechaHoraArribo, Aerolinea aerolinea, Collection<Piloto> pilotos, Avion avion,
 			Collection<Pasajero> pasajeros) {
 		this.codigoVuelo = codigoVuelo;
 		this.salida = salida;
