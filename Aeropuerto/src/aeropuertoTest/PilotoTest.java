@@ -14,12 +14,17 @@ import clases.Piloto;
 public class PilotoTest {
 
 	@Test
+	public void getSurnameAndName_FormatCriteria_ShowCorrectFormat() {
+		final Piloto unPiloto = makeAPilot();
+		final String pilotName = unPiloto.getSurnameAndName();
+		assertEquals("Perez, Juan Antonio", pilotName);
+	}
+
+	@Test
 	public void getAgeMethod_CalculateAgeMock_Return34() {
 		final Piloto unPiloto = makeAPilot();
 		final int pilotAge = unPiloto.getAge(LocalDate.of(2018, 4, 13));
-
 		assertEquals(34, pilotAge);
-
 	}
 
 	@Test
@@ -39,8 +44,9 @@ public class PilotoTest {
 	@Test
 	public void Pilots_AgeCriteriaEqualDateOfBirth_OutputOrderIndistinctly() {
 
-		final Piloto juanPerez = new Piloto(1, "Perez", "Juan Antonio", "07071970", LocalDate.of(1970, 7, 7));
 		final Piloto juanMartinez = new Piloto(2, "Martínez", "Juan Ignacio", "08081978", LocalDate.of(1970, 7, 7));
+		final Piloto juanPerez = new Piloto(1, "Perez", "Juan Antonio", "07071970", LocalDate.of(1970, 7, 7));
+
 		final LinkedList<Piloto> pilotList = new LinkedList<>();
 		pilotList.add(juanPerez);
 		pilotList.add(juanMartinez);

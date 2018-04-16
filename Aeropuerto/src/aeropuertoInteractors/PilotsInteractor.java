@@ -11,22 +11,19 @@ import clases.Piloto;
 public class PilotsInteractor {
 
 	public static String orderPilotsByAgeDesc(LinkedList<Piloto> pilotList) {
-
 		final List<Piloto> orderedPilots = pilotList.stream().sorted(Comparator.comparing(Piloto::getFechaNacimiento))
 				.collect(Collectors.toList());
-
 		String returnString = "";
 		for (final Piloto piloto : orderedPilots) {
 			returnString += piloto.getSurnameAndName() + " - " + piloto.getAge(LocalDate.now()) + " años.\r\n";
 		}
-
 		return returnString;
-
 	}
 
 	public static Integer getFlightHours(Piloto aPilot) {
 		// TODO Auto-generated method stub
-		return 0;
+		return aPilot.getTotalHours().intValue();
+
 	}
 
 }

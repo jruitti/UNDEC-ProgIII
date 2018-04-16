@@ -1,6 +1,8 @@
 package clases;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Collection;
 
 public class Vuelo {
@@ -27,6 +29,11 @@ public class Vuelo {
 		this.pilotos = pilotos;
 		this.avion = avion;
 		this.pasajeros = pasajeros;
+	}
+
+	public Long getDurationInHours() {
+		return Duration.between(fechaHoraSalida, fechaHoraArribo).get(ChronoUnit.HOURS);
+
 	}
 
 }
