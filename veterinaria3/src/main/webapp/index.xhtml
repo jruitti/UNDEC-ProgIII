@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Titulo Página</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h3>Crear Especie</h3>
+		<p:messages id="msjEspecie" showDetail="true" autoUpdate="true"
+			closable="true" severity="info,fatal,warn" />
+		<h:panelGrid columns="3">
+	
+			<h:outputLabel for="txtNombre">Nombre:</h:outputLabel>
+			<p:inputText value="#{especieController.current.nombre}"
+				id="txtNombre"></p:inputText>
+			<p:commandButton id="btnGuardarEspecie" value="Guardar Especie"
+				action="#{especieController.guardarEspecie()}"></p:commandButton>
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
