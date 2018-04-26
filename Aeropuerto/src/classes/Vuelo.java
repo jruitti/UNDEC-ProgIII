@@ -1,4 +1,4 @@
-package clases;
+package classes;
 
 import java.time.Duration;
 import java.time.LocalDateTime;

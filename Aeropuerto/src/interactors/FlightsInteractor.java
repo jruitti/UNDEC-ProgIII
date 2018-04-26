@@ -1,10 +1,10 @@
-package aeropuertoInteractors;
+package interactors;
 
 import java.util.Collection;
 import java.util.LinkedList;
 
-import clases.Piloto;
-import clases.Vuelo;
+import classes.Piloto;
+import classes.Vuelo;
 
 public class FlightsInteractor {
 

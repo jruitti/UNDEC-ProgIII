@@ -1,4 +1,4 @@
-package aeropuertoInteractors;
+package interactors;
 
 import java.time.LocalDate;
 import java.util.Comparator;
@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import clases.Piloto;
+import classes.Piloto;
 
 public class PilotsInteractor {
 
