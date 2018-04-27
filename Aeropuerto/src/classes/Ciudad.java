@@ -12,4 +12,8 @@ public class Ciudad {
 		this.codigoPostal = codigoPostal;
 	}
 
+	public String getName() {
+		return this.nombre;
+	}
+
 }

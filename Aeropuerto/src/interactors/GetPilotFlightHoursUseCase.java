@@ -14,13 +14,12 @@ public class GetPilotFlightHoursUseCase {
 		this.flightRepository = flightRepository;
 	}
 
-	public int getPilotFlighHours(Piloto aPilot) {
+	public int getPilotFlightHours(Piloto aPilot) {
 		Collection<Vuelo> pilotFlights = flightRepository.getFlights(aPilot);
 		int flightHours = 0;
 		for (Vuelo vuelo : pilotFlights) {
 			flightHours += vuelo.getDurationInMinutes();
 		}
-
 		return flightHours / 60;
 	}
 

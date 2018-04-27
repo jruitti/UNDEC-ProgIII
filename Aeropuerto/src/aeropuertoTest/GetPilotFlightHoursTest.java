@@ -17,14 +17,14 @@ import repository.FlightRepository;
 public class GetPilotFlightHoursTest {
 
 	@Test
-	public void FlightHoursPilot_RequestSum_ReturnSum() {
+	public void FlightHoursPilot_RequestSum_ReturnTotalSumInHours() {
 
 		FakeFlightRepository fakeFlightRepository = new FakeFlightRepository();
 
 		GetPilotFlightHoursUseCase getPilotFlightHoursUseCase = new GetPilotFlightHoursUseCase(fakeFlightRepository);
 		Piloto aPilot = new Piloto(1, "Ruitti", "Javier", "30672405", LocalDate.of(1984, 1, 31));
 
-		int pilotFlightHours = getPilotFlightHoursUseCase.getPilotFlighHours(aPilot);
+		int pilotFlightHours = getPilotFlightHoursUseCase.getPilotFlightHours(aPilot);
 
 		assertEquals(20, pilotFlightHours);
 

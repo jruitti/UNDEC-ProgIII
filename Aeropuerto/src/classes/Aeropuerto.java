@@ -14,4 +14,9 @@ public class Aeropuerto {
 		this.ciudad = ciudad;
 	}
 
+	public String showDenomination() {
+		// TODO Auto-generated method stub
+		return this.nombre + " - " + this.ciudad.getName() + " - " + this.codigo;
+	}
+
 }
