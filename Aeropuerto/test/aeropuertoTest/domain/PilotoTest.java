@@ -1,4 +1,4 @@
-package aeropuertoTest;
+package aeropuertoTest.domain;
 
 public class PilotoTest {
 

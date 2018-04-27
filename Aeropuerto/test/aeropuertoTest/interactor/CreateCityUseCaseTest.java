@@ -1,4 +1,4 @@
-package aeropuertoTest;
+package aeropuertoTest.interactor;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
