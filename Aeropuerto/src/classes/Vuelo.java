@@ -30,8 +30,8 @@ public class Vuelo {
 		this.pasajeros = pasajeros;
 	}
 
-	public Long getDurationInHours() {
-		return Duration.between(fechaHoraSalida, fechaHoraArribo).toHours();
+	public Long getDurationInMinutes() {
+		return Duration.between(fechaHoraSalida, fechaHoraArribo).toMinutes();
 
 	}
 

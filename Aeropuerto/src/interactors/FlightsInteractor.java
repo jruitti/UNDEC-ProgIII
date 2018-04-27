@@ -14,7 +14,7 @@ public class FlightsInteractor {
 
 		Long horas = 0L;
 		for (final Vuelo theFlight : allFlights) {
-			horas += theFlight.getDurationInHours();
+			horas += theFlight.getDurationInMinutes();
 		}
 
 		return horas.intValue();
