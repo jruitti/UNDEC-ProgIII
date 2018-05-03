@@ -14,11 +14,11 @@ class AeropuertoTest {
 
 		Ciudad theCity = new Ciudad(1, "La Rioja", "5300");
 
-		Aeropuerto theAirport = new Aeropuerto(1, "Aeropuerto Capitán Vicente Almandos Almonacid", "IRJ", theCity);
+		Aeropuerto theAirport = new Aeropuerto(1, "AeropuertoEntity Capitán Vicente Almandos Almonacid", "IRJ", theCity);
 
 		String returned = theAirport.showDenomination();
 
-		assertEquals("Aeropuerto Capitán Vicente Almandos Almonacid - La Rioja - IRJ", returned);
+		assertEquals("AeropuertoEntity Capitán Vicente Almandos Almonacid - La Rioja - IRJ", returned);
 
 	}
 

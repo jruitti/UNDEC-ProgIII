@@ -4,14 +4,14 @@ public class PilotoTest {
 
 	// @Test
 	// public void getSurnameAndName_FormatCriteria_ShowCorrectFormat() {
-	// final Piloto unPiloto = makeAPilot();
+	// final PilotoEntity unPiloto = makeAPilot();
 	// final String pilotName = unPiloto.getSurnameAndName();
 	// assertEquals("Perez, Juan Antonio", pilotName);
 	// }
 	//
 	// @Test
 	// public void getAgeMethod_CalculateAgeMock_Return34() {
-	// final Piloto unPiloto = makeAPilot();
+	// final PilotoEntity unPiloto = makeAPilot();
 	// final int pilotAge = unPiloto.getAge(LocalDate.of(2018, 4, 13));
 	// assertEquals(34, pilotAge);
 	// }
@@ -19,7 +19,7 @@ public class PilotoTest {
 	// @Test
 	// public void Pilots_AgeCriteria_OutputOrderDesc() {
 	//
-	// final LinkedList<Piloto> pilotList = makePilots();
+	// final LinkedList<PilotoEntity> pilotList = makePilots();
 	//
 	// final String orderedPilots =
 	// PilotsInteractor.orderPilotsByAgeDesc(pilotList);
@@ -35,12 +35,12 @@ public class PilotoTest {
 	// @Test
 	// public void Pilots_AgeCriteriaEqualDateOfBirth_OutputOrderIndistinctly() {
 	//
-	// final Piloto juanMartinez = new Piloto(2, "Martínez", "Juan Ignacio",
+	// final PilotoEntity juanMartinez = new PilotoEntity(2, "Martínez", "Juan Ignacio",
 	// "08081978", LocalDate.of(1970, 7, 7));
-	// final Piloto juanPerez = new Piloto(1, "Perez", "Juan Antonio", "07071970",
+	// final PilotoEntity juanPerez = new PilotoEntity(1, "Perez", "Juan Antonio", "07071970",
 	// LocalDate.of(1970, 7, 7));
 	//
-	// final LinkedList<Piloto> pilotList = new LinkedList<>();
+	// final LinkedList<PilotoEntity> pilotList = new LinkedList<>();
 	// pilotList.add(juanPerez);
 	// pilotList.add(juanMartinez);
 	//
@@ -52,25 +52,25 @@ public class PilotoTest {
 	//
 	// }
 	//
-	// private LinkedList<Piloto> makePilots() {
-	// final Collection<Piloto> losPilotos = new LinkedList<Piloto>();
-	// final Piloto juanPerez = new Piloto(1, "Perez", "Juan Antonio", "07071970",
+	// private LinkedList<PilotoEntity> makePilots() {
+	// final Collection<PilotoEntity> losPilotos = new LinkedList<PilotoEntity>();
+	// final PilotoEntity juanPerez = new PilotoEntity(1, "Perez", "Juan Antonio", "07071970",
 	// LocalDate.of(1970, 7, 7));
-	// final Piloto juanMartinez = new Piloto(2, "Martínez", "Juan Ignacio",
+	// final PilotoEntity juanMartinez = new PilotoEntity(2, "Martínez", "Juan Ignacio",
 	// "08081978", LocalDate.of(1978, 8, 8));
-	// final Piloto juanLopez = new Piloto(3, "López", "Juan Carlos", "05051950",
+	// final PilotoEntity juanLopez = new PilotoEntity(3, "López", "Juan Carlos", "05051950",
 	// LocalDate.of(1950, 5, 5));
-	// final Piloto juanGomez = new Piloto(4, "Gómez", "Juan Gabriel", "10101960",
+	// final PilotoEntity juanGomez = new PilotoEntity(4, "Gómez", "Juan Gabriel", "10101960",
 	// LocalDate.of(1960, 10, 10));
 	// losPilotos.add(juanPerez);
 	// losPilotos.add(juanMartinez);
 	// losPilotos.add(juanLopez);
 	// losPilotos.add(juanGomez);
-	// return (LinkedList<Piloto>) losPilotos;
+	// return (LinkedList<PilotoEntity>) losPilotos;
 	// }
 	//
-	// private Piloto makeAPilot() {
-	// return new Piloto(1, "Perez", "Juan Antonio", "07071970", LocalDate.of(1984,
+	// private PilotoEntity makeAPilot() {
+	// return new PilotoEntity(1, "Perez", "Juan Antonio", "07071970", LocalDate.of(1984,
 	// 1, 31));
 	// }
 

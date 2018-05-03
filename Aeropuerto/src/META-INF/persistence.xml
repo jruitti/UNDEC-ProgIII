@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Aeropuerto">
+	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+	<class>model.AerolineaEntity</class>
+	<class>model.AeropuertoEntity</class>
+	<class>model.AsientoEntity</class>
+	<class>model.AsignacionEntity</class>
+	<class>model.AvionEntity</class>
+	<class>model.CiudadEntity</class>
+	<class>model.PasajeroEntity</class>
+	<class>model.PilotoEntity</class>
+	<class>model.VueloEntity</class>
+	</persistence-unit>
+</persistence>
