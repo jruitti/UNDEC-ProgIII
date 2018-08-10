@@ -17,6 +17,7 @@ public class AerolineaEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "aerolinea_seq")
 	private Integer idAerolinea;
+
 	private String nombre;
 
 	public AerolineaEntity() {

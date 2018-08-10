@@ -18,8 +18,10 @@ public class AsignacionEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "asignacion_seq")
 	private String codigoAsignacion;
+
 	@ManyToOne
 	private PasajeroEntity pasajero;
+
 	@ManyToOne
 	private AsientoEntity asiento;
 

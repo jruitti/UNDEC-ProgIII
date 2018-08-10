@@ -40,4 +40,8 @@ public class Vuelo {
 		return null;
 	}
 
+	public Collection<Piloto> getPilotos() {
+		return pilotos;
+	}
+
 }

@@ -24,18 +24,24 @@ public class VueloEntity implements Serializable {
 
 	@ManyToOne
 	private AeropuertoEntity salida;
+
 	private LocalDateTime fechaHoraSalida;
+
 	@ManyToOne
 	private AeropuertoEntity arribo;
+
 	private LocalDateTime fechaHoraArribo;
+
 	@ManyToOne
 	private AerolineaEntity aerolinea;
-	@OneToMany
+
 	private Collection<PilotoEntity> pilotos;
+
 	@ManyToOne
 	private AvionEntity avion;
+
 	@OneToMany
-	private Collection<PasajeroEntity> pasajeros;
+	private Collection<AsignacionEntity> pasajeros;
 
 	public VueloEntity() {
 
@@ -105,11 +111,11 @@ public class VueloEntity implements Serializable {
 		this.avion = avion;
 	}
 
-	public Collection<PasajeroEntity> getPasajeros() {
+	public Collection<AsignacionEntity> getPasajeros() {
 		return pasajeros;
 	}
 
-	public void setPasajeros(Collection<PasajeroEntity> pasajeros) {
+	public void setPasajeros(Collection<AsignacionEntity> pasajeros) {
 		this.pasajeros = pasajeros;
 	}
 
