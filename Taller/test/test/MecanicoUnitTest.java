@@ -6,6 +6,8 @@ import java.time.LocalDate;
 
 import org.junit.jupiter.api.Test;
 
+import clases.Mecanico;
+
 class MecanicoUnitTest {
 
 	@Test

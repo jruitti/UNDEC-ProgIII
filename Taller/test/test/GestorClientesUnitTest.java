@@ -7,6 +7,10 @@ import java.util.LinkedList;
 
 import org.junit.jupiter.api.Test;
 
+import gestor.GestorCliente;
+import clases.Cliente;
+import clases.Vehiculo;
+
 class GestorClientesUnitTest {
 
 	@Test
@@ -36,7 +40,7 @@ class GestorClientesUnitTest {
 	private Cliente factoryCliente() {
 		Vehiculo elVehiculo=Vehiculo.instancia(1, "VW Golf", "ABC123", 2009);
 		Cliente elCliente=Cliente.instancia(1, "Lopez", "Juan Manuel", "30123456", LocalDate.of(1990, 5, 20),"9 de Julio 1000","3825405060");
-		elcliente.asignarVehiculo(elVehiculo);
+		elCliente.asignarVehiculo(elVehiculo);
 		return elCliente;
 	}
 
