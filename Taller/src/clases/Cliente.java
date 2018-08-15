@@ -19,7 +19,6 @@ public class Cliente {
 	
 	private Cliente(int idCliente, String apellido, String nombres, String documento, LocalDate fechaNacimiento,
 			String domicilio, String telefono) {
-		super();
 		this.idCliente = idCliente;
 		this.apellido = apellido;
 		this.nombres = nombres;
@@ -37,7 +36,6 @@ public class Cliente {
 		if(documento!=null) {
 			return new Cliente(idCliente, apellido, nombres, documento, fechaNacimiento, domicilio, telefono);
 		}
-		
 		return null;
 	}
 

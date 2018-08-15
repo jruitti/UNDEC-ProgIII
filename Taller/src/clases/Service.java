@@ -31,10 +31,7 @@ public class Service {
 	}
 
 	public String mostrarResumen() {
-		// TODO Auto-generated method stub
-		//Service Nro: 1\nCliente: Lopez, Juan Manuel - 3825405060\nVehiculo: VW Golf modelo 2009 - Patente ABC123\nTrabajo Realizado: Cambio de Aceite y Filtro\nTotal: $ 1500,00
-		String resumen="Service Nro: "+this.idService+"\nCliente: "+this.elCliente.mostrarCliente()+"\nVehiculo: "+this.elVehiculo.mostrarVehiculo()+"\nTrabajo Realizado: "+this.detalle+"\nTotal: $ "+this.precio;
-		return resumen;
+		return "Service Nro: "+this.idService+"\nCliente: "+this.elCliente.mostrarCliente()+"\nVehiculo: "+this.elVehiculo.mostrarVehiculo()+"\nTrabajo Realizado: "+this.detalle+"\nTotal: $ "+this.precio;
 	}
 
 }

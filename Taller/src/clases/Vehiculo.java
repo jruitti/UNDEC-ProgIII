@@ -8,7 +8,6 @@ public class Vehiculo {
 	private int anio;
 
 	private Vehiculo(int idVehiculo, String marcaModelo, String patente, int anio) {
-		super();
 		this.idVehiculo = idVehiculo;
 		this.marcaModelo = marcaModelo;
 		this.patente = patente;
@@ -22,7 +21,6 @@ public class Vehiculo {
 	}
 
 	public String mostrarVehiculo() {
-		// TODO Auto-generated method stub
 		return this.marcaModelo+" modelo "+this.anio+" - Patente "+this.patente;
 	}
 
